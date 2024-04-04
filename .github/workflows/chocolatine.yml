@@ -62,8 +62,10 @@ jobs:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
       - uses: actions/checkout@v4
+      - name: pushing
+        uses: pixta-dev/repository-mirroring-action@v1
         with:
-          ssh_private_key: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
-          mirror_repository_url: ${{ env.MIRROR_URL }}
-          args: '--mirror'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          target_repo_url: ${{ env.MIRROR_URL }}
