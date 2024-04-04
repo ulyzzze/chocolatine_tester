@@ -24,7 +24,4 @@ fclean:
 
 re: fclean $(NAME) clean
 
-# tests_run: 
-# 	echo "ALL TESTS PASSED !"
-
 .PHONY : all clean fclean re
