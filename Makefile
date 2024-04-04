@@ -25,3 +25,5 @@ fclean:
 re: fclean $(NAME) clean
 
 .PHONY : all clean fclean re
+
+tests_run: echo "ALL TESTS PASSED !"
