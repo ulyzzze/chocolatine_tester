@@ -48,10 +48,12 @@ jobs:
     name: "Running tests"
     container: epitechcontent/epitest-docker
     steps:
+      - name: checkout
       - uses: actions/checkout@v4
         with:
           repository: ''
       - name: run_tests
+        timeout-minutes: 2
         run: make tests_run
           
 
