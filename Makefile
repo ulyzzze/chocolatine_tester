@@ -11,19 +11,20 @@ CC = gcc
 
 NAME = main
 
-$(NAME):
-	gcc -o $(NAME) $(CFILES) -g3
+$(NAME): $(CFILES)
+	$(CC) -o $(NAME) $(CFILES) -g3
 
 all: $(NAME)
 
 clean:
-	rm -rf $(wildcard *.o)
+	rm -f $(wildcard *.o)
 
-fclean:
-	$(clean) rm -f $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
-re: fclean $(NAME) clean
+re: fclean all
 
 .PHONY : all clean fclean re
 
-tests_run: echo "ALL TESTS PASSED !"
+tests_run:
+	echo "ALL TESTS PASSED"
