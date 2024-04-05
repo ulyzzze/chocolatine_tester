@@ -9,7 +9,7 @@ on:
       - "ga-ignore-*"
 
 env:
-  MIRROR_URL: git@github.com:ulyzzze/chocolatine_tester.git
+  MIRROR_URL: git@github.com:EpitechPromo2028/B-DOP-200-LYN-2-1-chocolatine-ulysse.couchoud.git
   EXECUTABLES: "main"
 
 jobs:
